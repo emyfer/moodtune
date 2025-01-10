@@ -4,32 +4,4 @@
     align-items: center;
 }
 
-.questions-wrapper {
-    margin-top: 5%;
-    font-size: 2vw;
-    width: 50%;
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-}
 
-.question {
-    font-family: Kreon;
-    font-size: 2.2vw;
-}
-
-.age {
-    display: flex;
-    flex-direction: column;
-}
-
-.gender {
-    display: flex;
-    flex-direction: column;
-}
-
-.radios {
-    display: flex;
-    justify-content: space-around;
-}

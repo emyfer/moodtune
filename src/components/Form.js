@@ -37,7 +37,7 @@ function Form() {
             return <FeelBefore formData={formData} setFormData={setFormData}/>
         }
         if(page === 3) {
-            return <WannaFeel formData={formData} setFormData={setFormData}/>
+            return <WannaFeel formData={formData} setFormData={setFormData} page={page} setPage={setPage}/>
         }
         if(page === 4) {
             return <Music formData={formData} setFormData={setFormData}/>
@@ -77,9 +77,10 @@ function Form() {
                 </div>
 
                 <div className="forward">
-                    <p className="next-text">{page === 0 ? "Kreni s testom!" : page === formTitles.length-1 ? "Završi test" : "Iduće pitanje"}</p>
+                    <p className="next-text" hidden = {page === 3}>{page === 0 ? "Kreni s testom!" : page === formTitles.length-1 ? "Završi test" : "Iduće pitanje"}</p>
                     <button 
                         className="next-button"
+                        hidden = {page === 3}
                         onClick={() => {
                             if (page === formTitles.length - 1) {
                                 navigate("/")

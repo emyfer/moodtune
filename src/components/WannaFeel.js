@@ -1,31 +1,36 @@
 import "./wannafeel.css"
 
 
-function WannaFeel({formData, setFormData}) {
+function WannaFeel({formData, setFormData, page, setPage}) {
 
     function handleMotivated() {
         setFormData(prevFormData => ({
             ...prevFormData,
             wannaFeel: "motivirano"
         }))
+        setPage(prevPage => prevPage + 1)
+        
     }
     function handleHappy() {
         setFormData(prevFormData => ({
             ...prevFormData,
             wannaFeel: "sretno"
         }))
+        setPage(prevPage => prevPage + 1)
     }
     function handleSad() {
         setFormData(prevFormData => ({
             ...prevFormData,
             wannaFeel: "tuzno"
         }))
+        setPage(prevPage => prevPage + 1)
     }
     function handleCalm() {
         setFormData(prevFormData => ({
             ...prevFormData,
             wannaFeel: "opusteno"
         }))
+        setPage(prevPage => prevPage + 1)
     }
 
     console.log(formData)
