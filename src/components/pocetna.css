@@ -1,0 +1,113 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+}
+
+.pozadina {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #eceee9;
+    height: 100%;
+    z-index: -2;
+    
+}
+
+.background-upper {
+    position: absolute;
+    opacity: 90%;
+    width: 100%;
+    height: 45%;
+    z-index: -1;
+}
+
+.upper-part {
+    padding-left: 10%;
+    margin-bottom: 40%;
+}
+
+.title {
+    color: #2C2C2C;
+    font-family: Kreon;
+    font-size: 10vW;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120.811%; /* 154.638px */
+    letter-spacing: -8.96px;
+    margin-bottom: 2%;
+}
+
+.buttons-part {
+    display: flex;
+    align-items: center;
+}
+
+.istrazivanje-button {
+    font-size: 1.5vw;
+    width: auto;
+    height: auto;
+    padding: 10px 50px;
+    border-radius: 15px;
+    border-width: 2px;
+    border:  solid #000;
+    background-color: white;
+    margin-right: 2%;
+    cursor: pointer;
+}
+
+.zapocni-button {
+    font-size: 1.5vw;
+    width: auto;
+    height: auto;
+    padding: 10px 50px;
+    border-radius: 15px;
+    border-width: 2px;
+    border:  solid #000;
+    background-color: #2C2C2C;
+    color: white;
+    cursor: pointer;
+}
+
+.middle-part {
+    text-align: center;
+    margin-bottom: 40%;
+}
+
+.istrazivanje-title {
+    font-family: Kreton;
+    color: #2C2C2C;
+    font-size: 5vW;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120.811%; /* 57.989px */
+    letter-spacing: -1.36px;
+}
+
+.lower-part {
+    text-align: center;
+    margin-bottom: 20%;
+}
+
+.test-button {
+    font-size: 1.6vw;
+    width: auto;
+    height: auto;
+    padding: 15px 60px;
+    border-radius: 30px;
+    border-width: 2px;
+    border:  solid #000;
+    background-color: #2C2C2C;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.background-lower {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    z-index: -1;
+    opacity: 90%;
+}

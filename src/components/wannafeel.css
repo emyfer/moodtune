@@ -1,0 +1,59 @@
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.question {
+    font-family: Kreon;
+    font-size: 2.2vw;
+}
+
+.choices-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto; 
+    gap: 15%; 
+    width: 100%; 
+    max-width: 800px; 
+    margin: 0 auto;
+}
+
+.choices-wrapper > button {
+    padding: 7%;
+    margin: 5%;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1.7vw;
+    font-family: Kreon;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Only shadow at the bottom */
+
+}
+
+.choices-wrapper > button:active {
+    
+    opacity: 70%;
+}
+
+.happy {
+    background: #D8C652;
+    color: black;
+}
+
+.sad {
+    background: #2F5C95;
+    color: white;
+}
+
+.motivated {
+    background: #5F4C8D;
+    color: white;
+}
+
+.calm {
+    color: white;
+    background: #5D814C;
+}
