@@ -11,6 +11,8 @@ import { useNavigate } from 'react-router-dom';
 
 function Form() {
 
+    //komentar
+
     const [formData, setFormData] = useState({
         age:"",
         gender:"",
@@ -57,7 +59,7 @@ function Form() {
             <Link to={"/"} className="title-form">
                 <header>MoodTune</header>
             </Link>
-           
+               
 
             <div className="main">
                 {PageDisplay()}
