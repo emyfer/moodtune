@@ -2,7 +2,6 @@ import {useEffect} from 'react'
 import {useState} from 'react'
 
 
-
 function Music({formData, setFormData}) {
 
     const mood = formData.wannaFeel
@@ -28,23 +27,20 @@ function Music({formData, setFormData}) {
             <div className="container">
                 <audio></audio>
 
-
-            <div className="blackScreen"></div>
-
-            <div className="music-container">
+                <div className="music-container">
 
                 <p className="musicPlayer"> Music Player</p>
           
-            <div className="musicTimerDiv">
-                <p className="musicCurrentTime">00 : 00</p>
-                <p className="musicTotalLenght">03 : 49</p>
-            </div>
+                <div className="musicTimerDiv">
+                    <p className="musicCurrentTime">00 : 00</p>
+                    <p className="musicTotalLenght">03 : 49</p>
+                </div>
 
-            <input type="range" name="musicProgress" className="musicProgressBar" />
+                <input type="range" name="musicProgress" className="musicProgressBar" />
 
-            <div className='musicControlers'>
-                <i className="play" onClick={handleAudioPlay}>{isAudioPlaying ? "►" : "◄"}</i>
-            </div>
+                <div className='musicControlers'>
+                    <i className="play" onClick={handleAudioPlay}>{isAudioPlaying ? "||" : "►"}</i>
+                </div>
             </div>
 
       </div>
