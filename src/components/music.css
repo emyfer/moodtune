@@ -1,3 +1,31 @@
 .play {
     cursor: pointer;
 }
+
+.containerM {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.music-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(226, 221, 221);
+    width: 80%;
+    height: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 40px;
+}
+
+.musicControlers {
+    width: 10%;
+    font-size: 2vw;
+}
+
+.musicProgressBar {
+    width: 60%;
+}

@@ -4,6 +4,7 @@ import WannaFeel from "./WannaFeel";
 import Music from "./Music";
 import PersonalInfo from "./PersonalInfo";
 import FeelAfter from "./FeelAfter";
+import EndMessage from "./EndMessage";
 import {useState} from "react"
 import "./form.css"
 import { Link } from "react-router-dom";
@@ -11,9 +12,8 @@ import { useNavigate } from 'react-router-dom';
 
 function Form() {
 
-    //komentar
-
     const [formData, setFormData] = useState({
+        userId: 1,
         age:"",
         gender:"",
         feelbefore:"",
@@ -45,6 +45,9 @@ function Form() {
         if (page === 5) {
             return <FeelAfter formData={formData} setFormData={setFormData}/>
         }
+        if(page === 6) {
+            return <EndMessage/>
+        }
     }
 
     function handleSubmit() {
@@ -68,22 +71,21 @@ function Form() {
             <div className="next-form">
 
                 <div className="backward">
-                    <p className="prev-text">{(page === 0 || page === 1) ? "" : "Prethodno pitanje"}</p>
+                    <p className="prev-text">{(page === 0 || page === 1 || page === 6) ? "" : "Prethodno pitanje"}</p>
                      <button 
                         className="prev-button" 
-                        hidden = {page === 0 || page === 1}
+                        hidden = {page === 0 || page === 1 || page === 6}
                         onClick={() => {setPage((curPage) => curPage - 1)}}>
                     ←</button>
                 </div>
 
                 <div className="forward">
-                    <p className="next-text" hidden = {page === 3}>{page === 0 ? "Kreni s testom!" : page === formTitles.length-1 ? "Završi test" : "Iduće pitanje"}</p>
+                    <p className="next-text" hidden = {page === 3 || page === 6}>{page === 0 ? "Kreni s testom!" : page === formTitles.length-1 ? "Završi test" : "Iduće pitanje"}</p>
                     <button 
                         className="next-button"
-                        hidden = {page === 3}
+                        hidden = {page === 3 || page === 6}
                         onClick={() => {
-                            if (page === formTitles.length - 1) {
-                                navigate("/")
+                            if (page === formTitles.length) {
                                 handleSubmit()
                             } else {
                                 setPage((curPage) => curPage + 1)
